@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu compra! - CRYPTOCULTURA</title>
+    <meta name="description" content="Tu eBook está en camino. Oferta especial: Onboarding 2×45 por tiempo limitado.">
+    <link rel="stylesheet" href="gracias-ebook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header simple -->
+    <header class="header">
+        <div class="container-header">
+            <div class="header-left">
+                <i class="fas fa-check-circle"></i>
+                <span>Gracias por tu compra</span>
+            </div>
+            <div class="header-right">
+                <i class="fas fa-envelope"></i>
+                <span>Pedido enviado a tu email</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Section 1: Thank you + Entrega -->
+        <section class="thank-you-section">
+            <div class="content-wrapper">
+                <div class="content-left">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1 class="main-title">¡Listo! Te enviamos el eBook a tu correo</h1>
+                    <p class="subtitle">Revisa tu bandeja de entrada y la carpeta de spam. Si no llega en 5 minutos, escríbenos a <a href="mailto:alfredo.martinez@cryptocultura.io">alfredo.martinez@cryptocultura.io</a></p>
+
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-title">
+                                <i class="fas fa-list-check"></i>
+                                ¿Qué sigue?
+                            </div>
+                            <ul class="info-list">
+                                <li><strong>1)</strong> Abre el eBook y completa el Día 1 (15–20 min)</li>
+                                <li><strong>2)</strong> Activa tu wallet y configura seguridad en 24h</li>
+                                <li><strong>3)</strong> Considera el Onboarding 2×45 si quieres velocidad</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-card-title">
+                                <i class="fas fa-box-open"></i>
+                                Qué recibes
+                            </div>
+                            <ul class="info-list">
+                                <li><strong>eBook:</strong> Link seguro en tu email</li>
+                                <li><strong>Plantillas:</strong> Incluidas en el capítulo 1</li>
+                                <li><strong>Soporte:</strong> Solo disponible con sesiones 1-1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timer -->
+                <div class="content-right">
+                    <div class="timer-card">
+                        <div class="timer-label">
+                            <i class="fas fa-clock"></i>
+                            Oferta válida por
+                        </div>
+                        <div class="timer-display" id="timer">
+                            <div class="timer-unit">
+                                <span class="timer-number" id="days">00</span>
+                                <span class="timer-text">días</span>
+                            </div>
+                            <span class="timer-separator">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-number" id="hours">00</span>
+                                <span class="timer-text">hrs</span>
+                            </div>
+                            <span class="timer-separator">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-number" id="minutes">00</span>
+                                <span class="timer-text">min</span>
+                            </div>
+                            <span class="timer-separator">:</span>
+                            <div class="timer-unit">
+                                <span class="timer-number" id="seconds">00</span>
+                                <span class="timer-text">seg</span>
+                            </div>
+                        </div>
+                        <p class="timer-note">72 horas desde tu compra</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Upsell Onboarding -->
+        <section class="upsell-section">
+            <div class="upsell-card">
+                <div class="upsell-header">
+                    <div class="upsell-header-left">
+                        <div class="upsell-badge">
+                            <i class="fas fa-bolt"></i>
+                            Oferta exclusiva post-compra
+                        </div>
+                        <h2 class="upsell-title">Da el salto en 7 días con <span class="highlight">Onboarding 2×45</span></h2>
+                        <p class="upsell-subtitle">Wallet segura, <strong>primera compra de $100</strong> y plan de 30 días. Sin prometer ROI.</p>
+                    </div>
+                    <div class="upsell-header-right">
+                        <div class="price-strike">Precio de lista: <span>$397</span></div>
+                        <div class="price-display">
+                            <span class="price-amount" id="priceAmount">$297</span>
+                            <span class="price-currency">USD</span>
+                        </div>
+                        <div class="price-subtitle" id="priceSubtitle">Precio lanzamiento (72h)</div>
+                    </div>
+                </div>
+
+                <!-- Benefits Grid -->
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-video"></i>
+                        <div class="benefit-content">
+                            <strong>Sesión 1:</strong> Wallet + seguridad + 1ª compra $100 (grabada)
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-clipboard-list"></i>
+                        <div class="benefit-content">
+                            <strong>Sesión 2:</strong> Plan 30 días + checklist personalizada
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-headset"></i>
+                        <div class="benefit-content">
+                            <strong>Soporte:</strong> 2 check-ins por email en 14 días
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-halved"></i>
+                        <div class="benefit-content">
+                            <strong>Garantía:</strong> 3 acciones ×10 o no pagas
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Variant Selector - SOLO 2 OPCIONES -->
+                <div class="variant-selector">
+                    <span class="variant-label">Elige tu opción:</span>
+                    <div class="variant-buttons variant-buttons-two">
+                        <button class="variant-btn active" data-variant="regular" id="variantRegular">
+                            <span class="variant-name">Regular</span>
+                            <span class="variant-price">$297 USD</span>
+                            <span class="variant-note">Precio lanzamiento</span>
+                        </button>
+                        <button class="variant-btn" data-variant="credit50" id="variantCredit">
+                            <span class="variant-name">Crédito $50</span>
+                            <span class="variant-price">$247 USD</span>
+                            <span class="variant-badge">Solo 72h · Cliente eBook</span>
+                        </button>
+                    </div>
+                    <p class="variant-anchor-note">
+                        <i class="fas fa-info-circle"></i>
+                        Precio de lista: $397 · Crédito $50 válido 72 h.
+                    </p>
+                </div>
+
+                <!-- CTAs -->
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary" id="ctaAccept">
+                        <i class="fas fa-calendar-check"></i>
+                        <span id="ctaText">Quiero el Onboarding ahora</span>
+                    </a>
+                    <a href="https://heyzine.com/flip-book/93bf96befa.html" class="btn-secondary">
+                        <i class="fas fa-book-open"></i>
+                        <span>No por ahora, ir a mi eBook</span>
+                    </a>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="social-proof">
+                    <i class="fas fa-shield-check"></i>
+                    <span>6 años en blockchain</span>
+                    <span class="separator">•</span>
+                    <span>5 años minando BTC</span>
+                    <span class="separator">•</span>
+                    <span>Marco de 5 preguntas anti-scam</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: FAQ Micro -->
+        <section class="faq-section">
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3 class="faq-title">¿Qué recibo exactamente?</h3>
+                    <p class="faq-answer">Dos sesiones de 45 min (grabadas), checklist personalizada, plan de 30 días y 2 check-ins por email en 14 días.</p>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="faq-title">¿Y si no me sirve?</h3>
+                    <p class="faq-answer">Si no recibes <strong>3 acciones</strong> que valgan 10× el precio, <strong>no pagas</strong>. Sin prometer ROI ni resultados garantizados.</p>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="faq-title">¿Cómo agendo?</h3>
+                    <p class="faq-answer">Tras pagar, recibirás un email con el enlace de Calendly para elegir horario. Cupos limitados cada semana.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Footer -->
+        <footer class="legal-footer">
+            <p><i class="fas fa-info-circle"></i> Contenido educativo. No es asesoría financiera. Rendimientos pasados no garantizan resultados futuros.</p>
+            <p>&copy; 2024 CRYPTOCULTURA. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+
+    <script src="gracias-ebook.js"></script>
+    
+    <!-- Email Automation Script -->
+    <script>
+    (function() {
+        // URL del Apps Script
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrtAwLecXv5Z3mkr5LQ4kdG6EHKK6TqxGSFCLPnvMPhKTUNpkzEPZE-oQlLTA-WfnbrQ/exec';
+        
+        // Obtener parámetros de URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const checkoutSessionId = urlParams.get('cid');
+        
+        // Solo ejecutar si hay checkout session ID (significa que acaba de comprar)
+        if (checkoutSessionId && !sessionStorage.getItem('email_sent_' + checkoutSessionId)) {
+            // Marcar como enviado para no duplicar
+            sessionStorage.setItem('email_sent_' + checkoutSessionId, 'true');
+            
+            // Detectar producto por URL actual
+            const currentPage = window.location.pathname;
+            let product = 'eBook';
+            
+            if (currentPage.includes('gracias-ebook')) {
+                product = 'eBook';
+            }
+            
+            // Enviar datos a Apps Script
+            const formData = new FormData();
+            formData.append('checkout_session_id', checkoutSessionId);
+            formData.append('product', product);
+            formData.append('payment_link', 'https://buy.stripe.com/00wcN66Ef4M518c1c3dfG00');
+            
+            // Usar fetch con mode no-cors para evitar errores CORS
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                console.log('Email automation triggered');
+            }).catch(err => {
+                console.log('Email sent (no-cors mode)');
+            });
+        }
+    })();
+    </script>
+</body>
+</html>

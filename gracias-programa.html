@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenido al Programa Intensivo! - CRYPTOCULTURA</title>
+    <meta name="description" content="Bienvenido al Programa Intensivo 6×60. Próximos pasos y recursos para comenzar tu journey crypto.">
+    <link rel="stylesheet" href="gracias-ebook.css">
+    <link rel="stylesheet" href="gracias-consultoria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .welcome-hero {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            background: var(--gradient-dark);
+            border-radius: 1.5rem;
+            border: 1px solid var(--border-dark);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .welcome-icon {
+            width: 5rem;
+            height: 5rem;
+            background: var(--gradient-blue);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+            animation: celebration 2s ease-in-out infinite;
+        }
+        
+        .welcome-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        @keyframes celebration {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(5deg); }
+        }
+        
+        .welcome-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-sm);
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .welcome-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .step-card {
+            background: var(--gradient-dark);
+            border: 2px solid var(--border-dark);
+            border-radius: 1.5rem;
+            padding: var(--spacing-lg);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .step-card:hover {
+            border-color: var(--cyan);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.2);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            padding-top: 0.5rem;
+        }
+        
+        .step-description {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .step-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--gradient-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        
+        .step-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+        }
+        
+        .timeline {
+            background: var(--bg-card);
+            border: 1px solid var(--border-dark);
+            border-radius: 1.5rem;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            text-align: center;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            width: 2px;
+            height: calc(100% - 20px);
+            background: var(--border-dark);
+        }
+        
+        .timeline-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+        
+        .timeline-icon i {
+            color: white;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .timeline-content p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 640px) {
+            .welcome-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container-header">
+            <div class="header-left">
+                <i class="fas fa-crown"></i>
+                <span>Programa Intensivo</span>
+            </div>
+            <div class="header-right">
+                <i class="fas fa-star"></i>
+                <span>Cliente VIP</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Welcome Hero -->
+        <section class="welcome-hero">
+            <div class="welcome-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h1 class="welcome-title">¡Bienvenido al Programa Intensivo!</h1>
+            <p class="welcome-subtitle">Estás a punto de dar el salto más importante en tu journey crypto. Aquí está todo lo que necesitas para comenzar.</p>
+        </section>
+
+        <!-- Próximos Pasos -->
+        <section>
+            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: var(--spacing-lg); text-align: center;">
+                <i class="fas fa-rocket" style="color: var(--cyan);"></i>
+                Próximos Pasos
+            </h2>
+
+            <div class="steps-grid">
+                <!-- Paso 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">
+                        <i class="fas fa-calendar-check" style="color: var(--cyan);"></i>
+                        Agenda tu primera sesión
+                    </h3>
+                    <p class="step-description">
+                        Recibirás un email en los próximos 5 minutos con el link de Calendly. Elige el horario que mejor te funcione para comenzar.
+                    </p>
+                    <a href="https://calendly.com/mtzstrategies/programa-intensivo-6x60-sesion-cryptocultura" class="step-action" target="_blank">
+                        <i class="fas fa-calendar-alt"></i>
+                        Agendar ahora
+                    </a>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">
+                        <i class="fas fa-users" style="color: var(--cyan);"></i>
+                        Únete al grupo privado
+                    </h3>
+                    <p class="step-description">
+                        Acceso exclusivo a nuestra comunidad de clientes VIP. Networking, recursos compartidos y soporte entre miembros.
+                    </p>
+                    <a href="WHATSAPP_GROUP_LINK" class="step-action" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Unirme al grupo
+                    </a>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">
+                        <i class="fas fa-download" style="color: var(--cyan);"></i>
+                        Descarga el workbook
+                    </h3>
+                    <p class="step-description">
+                        Workbook de 90 días con ejercicios, plantillas y checklists que usaremos durante el programa.
+                    </p>
+                    <a href="WORKBOOK_DOWNLOAD_LINK" class="step-action" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                        Descargar workbook
+                    </a>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">
+                        <i class="fas fa-clipboard-check" style="color: var(--cyan);"></i>
+                        Completa el pre-assessment
+                    </h3>
+                    <p class="step-description">
+                        Cuestionario de 5 minutos para conocer tu situación actual, objetivos y experiencia. Esto me ayuda a personalizar tu roadmap.
+                    </p>
+                    <a href="PRE_ASSESSMENT_FORM" class="step-action" target="_blank">
+                        <i class="fas fa-edit"></i>
+                        Completar assessment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline">
+            <h2 class="timeline-title">
+                <i class="fas fa-route"></i>
+                Tu Roadmap de 90 Días
+            </h2>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-flag-checkered"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Sesión 1 (Semana 1): Diagnóstico + Objetivos</h4>
+                    <p>Evaluamos tu situación actual, definimos objetivos claros y creamos tu roadmap personalizado de 90 días.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Sesión 2 (Semana 2): Montaje de Stack</h4>
+                    <p>Instalamos wallets, configuramos exchanges, implementamos seguridad y hacemos tu primera compra guiada.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-search-dollar"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Sesión 3-4 (Semana 4-6): Evaluación de Proyectos</h4>
+                    <p>Analizamos 3 proyectos que te interesen usando el framework de 5 preguntas. Aprendes a investigar por ti mismo.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Sesión 5 (Semana 8): Revisión de Portafolio</h4>
+                    <p>Creamos tu estrategia de diversificación, gestión de riesgo y plan de DCA (Dollar Cost Averaging).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Sesión 6 (Semana 12): Optimización + Plan Largo Plazo</h4>
+                    <p>Revisamos resultados, optimizamos estrategia y creamos tu plan de acción para los próximos 6-12 meses.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qué incluye -->
+        <section style="margin: var(--spacing-xl) 0;">
+            <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: var(--spacing-lg); text-align: center;">
+                Todo lo que incluye tu programa
+            </h2>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-video"></i>
+                    <div class="benefit-content">
+                        <strong>6 sesiones de 60 min:</strong> Todas grabadas para que puedas revisarlas cuando quieras
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-road"></i>
+                    <div class="benefit-content">
+                        <strong>Roadmap 90 días:</strong> Plan personalizado desde cero hasta tu primera inversión estratégica
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-headset"></i>
+                    <div class="benefit-content">
+                        <strong>Soporte continuo:</strong> 2 check-ins por semana durante 30 días vía email/WhatsApp
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-book"></i>
+                    <div class="benefit-content">
+                        <strong>Materiales premium:</strong> Workbook, plantillas, checklists y recursos exclusivos
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-users"></i>
+                    <div class="benefit-content">
+                        <strong>Comunidad VIP:</strong> Acceso a grupo privado de clientes del programa
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-check"></i>
+                    <div class="benefit-content">
+                        <strong>Garantía:</strong> Si no recibes 3 acciones que valgan 10× el precio, reembolso completo
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparación -->
+        <section class="preparation-box">
+            <h3><i class="fas fa-lightbulb"></i> Prepárate para tu primera sesión:</h3>
+            <ul>
+                <li>✅ Completa el pre-assessment (link arriba)</li>
+                <li>✅ Ten listo tu laptop/computadora (no móvil)</li>
+                <li>✅ Conexión estable de internet + cámara/micrófono</li>
+                <li>✅ Lista de 3-5 proyectos crypto que te interesen</li>
+                <li>✅ Objetivos claros de qué quieres lograr en 90 días</li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section style="text-align: center; margin: var(--spacing-xl) 0; padding: var(--spacing-lg); background: var(--gradient-dark); border-radius: 1rem; border: 1px solid var(--border-dark);">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: var(--spacing-md);">
+                ¿Dudas o preguntas?
+            </h3>
+            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);">
+                Estoy aquí para ayudarte. Respondo en menos de 24 horas.
+            </p>
+            <a href="mailto:alfredo.martinez@cryptocultura.io" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; background: var(--gradient-blue); color: white; text-decoration: none; border-radius: 0.75rem; font-weight: 600;">
+                <i class="fas fa-envelope"></i>
+                Contactar a Alfredo
+            </a>
+        </section>
+
+        <!-- Legal Footer -->
+        <footer class="legal-footer">
+            <p><i class="fas fa-info-circle"></i> Contenido educativo. No es asesoría financiera. Rendimientos pasados no garantizan resultados futuros.</p>
+            <p>&copy; 2024 CRYPTOCULTURA. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+
+    <script>
+        // Tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'purchase', {
+                transaction_id: new URLSearchParams(window.location.search).get('cid'),
+                value: 1499,
+                currency: 'USD',
+                items: [{
+                    item_id: 'programa_intensivo_6x60',
+                    item_name: 'Programa Intensivo 6×60',
+                    price: 1499,
+                    quantity: 1
+                }]
+            });
+        }
+
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Purchase', {
+                value: 1499,
+                currency: 'USD',
+                content_name: 'Programa Intensivo 6×60',
+                content_category: 'Premium Program'
+            });
+        }
+    </script>
+    
+    <!-- Email Automation Script -->
+    <script>
+    (function() {
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrtAwLecXv5Z3mkr5LQ4kdG6EHKK6TqxGSFCLPnvMPhKTUNpkzEPZE-oQlLTA-WfnbrQ/exec';
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const checkoutSessionId = urlParams.get('cid');
+        const isUpgrade = urlParams.get('upgrade');
+        
+        if (checkoutSessionId && !sessionStorage.getItem('email_sent_' + checkoutSessionId)) {
+            sessionStorage.setItem('email_sent_' + checkoutSessionId, 'true');
+            
+            // Detectar si es compra normal o upgrade
+            let product = 'Programa $1,499';
+            let paymentLink = 'https://buy.stripe.com/4gMaEY1jVdiBg369IzdfG02';
+            
+            if (isUpgrade === 'true') {
+                product = 'Programa Upgrade $1,002';
+                paymentLink = 'https://buy.stripe.com/28EcN63s3guNcQUdYPdfG04';
+            }
+            
+            const formData = new FormData();
+            formData.append('checkout_session_id', checkoutSessionId);
+            formData.append('product', product);
+            formData.append('payment_link', paymentLink);
+            
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                console.log('Email automation triggered');
+            }).catch(err => {
+                console.log('Email sent (no-cors mode)');
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
