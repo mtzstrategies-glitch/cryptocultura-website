@@ -1,0 +1,193 @@
+/* ========================================
+   Estilos adicionales para gracias-consultoria.html
+   Se usa junto con gracias-ebook.css
+   ======================================== */
+
+/* Botón Calendly */
+.btn-calendly {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.5rem;
+    background: var(--gradient-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.btn-calendly:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 188, 212, 0.5);
+}
+
+/* Preparation Box */
+.preparation-box {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(2, 119, 189, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-left: 4px solid var(--cyan);
+    border-radius: 1rem;
+}
+
+.preparation-box h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.preparation-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.preparation-box li {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    padding-left: 0.5rem;
+}
+
+/* Comparison Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+@media (min-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.comparison-column {
+    background: var(--gradient-dark);
+    border: 2px solid var(--border-dark);
+    border-radius: 1.5rem;
+    padding: var(--spacing-lg);
+    position: relative;
+}
+
+.comparison-column.comparison-featured {
+    border-color: var(--cyan);
+    background: linear-gradient(135deg, rgba(2, 119, 189, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.3);
+}
+
+.comparison-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--gradient-blue);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.comparison-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+.comparison-featured .comparison-title i {
+    color: var(--cyan);
+}
+
+.comparison-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.comparison-list li {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.comparison-featured .comparison-list li {
+    color: var(--text-primary);
+}
+
+/* Price Credit */
+.price-credit {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(0, 188, 212, 0.1);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--cyan);
+    text-align: center;
+}
+
+/* Guarantee Box */
+.guarantee-box {
+    display: flex;
+    align-items: start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(2, 119, 189, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-radius: 1rem;
+    margin-top: var(--spacing-lg);
+}
+
+.guarantee-box i {
+    font-size: 2rem;
+    color: var(--cyan);
+    flex-shrink: 0;
+}
+
+.guarantee-box strong {
+    color: var(--cyan);
+}
+
+.guarantee-box div {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .comparison-title {
+        font-size: 1rem;
+    }
+    
+    .comparison-list li {
+        font-size: 0.8125rem;
+    }
+    
+    .guarantee-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
