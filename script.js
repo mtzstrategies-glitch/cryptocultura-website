@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Observador para activar el contador cuando sea visible
-    const statsObserver = new IntersectionObserver((entries) => {
+        const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !hasAnimated) {
                 hasAnimated = true;
@@ -136,12 +136,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2, rootMargin: '0px' });
     
     const statsSection = document.querySelector('.stats');
     if (statsSection) {
         statsObserver.observe(statsSection);
     }
+    
+    // Fallback: animar después de 3 segundos si no se ha activado (mobile fix)
+    setTimeout(() => {
+        if (!hasAnimated && statNumbers.length > 0) {
+            hasAnimated = true;
+            statNumbers.forEach(stat => {
+                animateCounter(stat);
+            });
+        }
+    }, 3000);
     
     // ===================================
     // ANIMACIONES AL SCROLL (AOS)
