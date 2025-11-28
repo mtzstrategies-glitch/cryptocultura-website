@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
         new MagicButton(button, config);
     });
     
-    console.log('🎨 MagicButton initialized on', ctaButtons.length, 'buttons');
+    console.log('MagicButton initialized on', ctaButtons.length, 'buttons');
 });
 
 // Exportar para uso manual si se necesita
