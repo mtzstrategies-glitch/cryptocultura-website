@@ -238,6 +238,37 @@ button {
     color: var(--text-light);
 }
 
+/* Shiny Effect for Beca Link */
+.shiny-link {
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fbbf24 0%, #ffffff 50%, #fbbf24 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shiny-animation 3s linear infinite;
+}
+
+@keyframes shiny-animation {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.shiny-link:hover {
+    background: linear-gradient(90deg, #fbbf24 0%, #ffffff 50%, #fbbf24 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shiny-animation 1.5s linear infinite;
+}
+
 /* ===================================
    HERO SECTION
    =================================== */
@@ -1699,19 +1730,20 @@ button {
 .cta-title {
     font-size: var(--font-size-4xl);
     font-weight: 800;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .cta-subtitle {
     font-size: var(--font-size-xl);
     opacity: 0.95;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
 }
 
 .cta-button-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
 }
 
 .cta-trust {
@@ -1831,8 +1863,8 @@ button {
 .modal-content {
     background: var(--bg-white);
     border-radius: var(--radius-2xl);
-    padding: var(--spacing-2xl);
-    max-width: 600px;
+    padding: var(--spacing-lg);
+    max-width: 520px;
     width: 100%;
     position: relative;
     transform: scale(0.8) translateY(50px);
@@ -1872,11 +1904,11 @@ button {
 
 .modal-icon {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
 }
 
 .modal-icon i {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #22c55e;
     animation: checkBounce 0.6s ease-out;
 }
@@ -1896,19 +1928,19 @@ button {
 }
 
 .modal-title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     font-weight: 700;
     text-align: center;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .modal-text {
     text-align: center;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-xl);
-    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
 }
 
 .modal-text strong {
@@ -1919,15 +1951,15 @@ button {
 .modal-steps {
     background: var(--bg-light);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
 .modal-step {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
 }
 
 .modal-step:last-child {
@@ -1935,8 +1967,8 @@ button {
 }
 
 .step-number {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     background: var(--gradient-primary);
     color: var(--text-light);
     border-radius: 50%;
@@ -1944,28 +1976,28 @@ button {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     flex-shrink: 0;
 }
 
 .step-text {
     color: var(--text-primary);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     font-weight: 500;
 }
 
 .modal-cta {
     text-align: center;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     background: linear-gradient(135deg, rgba(2, 119, 189, 0.05) 0%, rgba(1, 87, 155, 0.05) 100%);
     border-radius: var(--radius-lg);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .modal-cta-text {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     font-weight: 500;
 }
 
@@ -1975,7 +2007,7 @@ button {
 
 .modal-social {
     text-align: center;
-    padding-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
     border-top: 1px solid var(--bg-light);
 }
 
