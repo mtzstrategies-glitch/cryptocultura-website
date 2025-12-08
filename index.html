@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20250108">
 </head>
 <body>
     <!-- Navigation -->
@@ -214,47 +214,96 @@
     </section>
 
     <!-- Lead Magnet Section -->
-    <section class="lead-magnet" id="lead-magnet">
+    <!-- Sección eBook Destacado -->
+    <section class="lead-magnet" id="ebook-featured">
         <div class="container">
             <div class="lead-magnet-content">
                 <div class="prism-bg"></div>
                 <div class="lead-magnet-text" data-aos="fade-right">
                     <div class="lead-magnet-badge">
+                        <i class="fas fa-book"></i>
+                        <span>OFERTA LANZAMIENTO 50% OFF</span>
+                    </div>
+                    <h2 class="lead-magnet-title shiny-text">La Nueva Economía Digital</h2>
+                    
+                    <div class="ebook-price" style="margin: 1.5rem 0;">
+                        <span style="color: #0b1e40; font-size: 2.5rem; font-weight: 700;">$49.99</span>
+                        <span style="color: #0b1e40; font-size: 1.2rem; margin-left: 0.5rem;">USD</span>
+                    </div>
+                    
+                    <ul class="lead-magnet-benefits">
+                        <li><i class="fas fa-check-circle"></i> Entenderás qué es Bitcoin y por qué es una revolución</li>
+                        <li><i class="fas fa-check-circle"></i> Conocerás los errores más comunes (y cómo evitarlos)</li>
+                        <li><i class="fas fa-check-circle"></i> Sabrás la verdad sobre la minería de criptomonedas</li>
+                        <li><i class="fas fa-check-circle"></i> Aprenderás de experiencias reales, no solo teoría</li>
+                        <li><i class="fas fa-check-circle"></i> Tendrás bases sólidas para NO perder dinero al empezar</li>
+                        <li><i class="fas fa-check-circle"></i> Temas avanzados: DeFi, RWA, NFT's y visión institucional</li>
+                        <li><i class="fas fa-check-circle"></i> 299+ páginas + actualizaciones por 1 año</li>
+                    </ul>
+                    
+                    <p style="color: #0b1e40; font-weight: 500; margin: 1.5rem 0; font-size: 1.05rem;">
+                        <i class="fas fa-lightbulb"></i> Ideal para: Autodidactas que quieren empezar sin errores
+                    </p>
+                    
+                    <a href="https://buy.stripe.com/00wcN66Ef4M518c1c3dfG00" target="_blank" class="btn btn-accent btn-lg btn-full-width">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar Ahora - $49.99
+                    </a>
+                    
+                    <p class="form-note" style="margin-top: 1rem;">
+                        <i class="fas fa-shield-alt"></i> Garantía 7 días. Satisfacción o reembolso
+                    </p>
+                </div>
+                
+                <div class="lead-magnet-visual" data-aos="fade-left">
+                    <div class="ebook-mockup">
+                        <img src="https://www.genspark.ai/api/files/s/yiUMPapA" alt="La Nueva Economía Digital - Ebook CRYPTOCULTURA" class="ebook-cover-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Compacto: Las 5 Preguntas -->
+    <section class="lead-magnet-compact" id="lead-magnet">
+        <div class="container">
+            <div class="lead-magnet-compact-content">
+                <div class="prism-bg"></div>
+                <div class="lead-magnet-compact-text" data-aos="fade-right">
+                    <div class="lead-magnet-badge-compact">
                         <i class="fas fa-gift"></i>
                         <span>Guía Gratuita</span>
                     </div>
-                    <h2 class="lead-magnet-title">Educación Cripto para Principiantes: Evalúa Proyectos en 10 Minutos</h2>
-                    <p class="lead-magnet-description">
+                    <h3 class="lead-magnet-compact-title">Las 5 Preguntas Que Separan Proyectos Reales de Humo</h3>
+                    <p class="lead-magnet-compact-description">
                         Descarga la guía práctica que te enseña a identificar proyectos sólidos y evitar estafas en el mundo crypto.
                     </p>
                     
-                    <ul class="lead-magnet-benefits">
-                        <li><i class="fas fa-check-circle"></i> Framework paso a paso para evaluar cualquier proyecto.</li>
-                        <li><i class="fas fa-check-circle"></i> Ejemplos reales de proyectos analizados.</li>
-                        <li><i class="fas fa-check-circle"></i> Señales de advertencia que debes conocer.</li>
-                        <li><i class="fas fa-check-circle"></i> Checklist descargable en PDF.</li>
+                    <ul class="lead-magnet-benefits-compact">
+                        <li><i class="fas fa-check-circle"></i> Framework paso a paso</li>
+                        <li><i class="fas fa-check-circle"></i> Ejemplos reales analizados</li>
+                        <li><i class="fas fa-check-circle"></i> Señales de advertencia</li>
+                        <li><i class="fas fa-check-circle"></i> Checklist descargable PDF</li>
                     </ul>
                     
-                    <form class="lead-form" id="leadForm">
-                        <div class="form-group">
-                            <input type="text" id="leadName" class="form-input" placeholder="Tu nombre" required>
-                            <input type="email" id="leadEmail" class="form-input" placeholder="tu@email.com" required>
-                            <button type="submit" class="btn btn-accent btn-lg btn-full-width" id="submitBtn">
+                    <form class="lead-form-compact" id="leadForm">
+                        <div class="form-group-compact">
+                            <input type="text" id="leadName" class="form-input-compact" placeholder="Tu nombre" required>
+                            <input type="email" id="leadEmail" class="form-input-compact" placeholder="tu@email.com" required>
+                            <button type="submit" class="btn btn-accent btn-compact" id="submitBtn">
                                 <i class="fas fa-download"></i>
-                                Descargar Guía Gratis
+                                Descargar Gratis
                             </button>
                         </div>
-                        <p class="form-note">
-                            <i class="fas fa-lock"></i> Te enviaremos la guía por correo. Revisa tu bandeja de entrada.
+                        <p class="form-note-compact">
+                            <i class="fas fa-lock"></i> Te enviaremos la guía por correo.
                         </p>
                         <div id="formMessage" style="margin-top: 1rem; display: none;"></div>
                     </form>
                 </div>
                 
-                <div class="lead-magnet-visual" data-aos="fade-left">
-                    <div class="ebook-mockup">
-                        <img src="https://www.genspark.ai/api/files/s/9vAme4i8?token=Z0FBQUFBQnBGaTd1NzVRUE9JWmhDYzF6a2ZEY2VmRmtPcFZiTlpsUXhlenVYLXgxMExPcnBOdlhuOU53cVdkNkYxZExNNTJDWElsOXo4cTFSYjNoaEl2SDhvUXlWM0JBTmU0WXo3VkpKYnJUTV9rTHFWMzNOVlZ0SXFkdklCWXc3X3Nvamstd2tmRWRybFdDT2xBOVE4RFpzRi1yZ0lDLUtNMmJDeXUwZUJGazNrc3hma2tnWHVkN2pIenBvRUE0bVBHYjRsTUdjZnRoU0JPLV9QTXJzWlJNUW4wQzl1NWoxSHFyWUpnTG9IWTNRTzB1MTM0YXN1MnBqSVdJdFNwVTRXNFZUem9LVVpWRUNqSk5mLUYxUUlnSjJlb2JhY1NnNUE9PQ" alt="Las 5 Preguntas Que Separan Proyectos Reales de Humo" class="ebook-cover-image">
-                    </div>
+                <div class="lead-magnet-compact-visual" data-aos="fade-left">
+                    <img src="https://www.genspark.ai/api/files/s/2FTjPybf" alt="Las 5 Preguntas Que Separan Proyectos Reales de Humo" class="lead-magnet-compact-image">
                 </div>
             </div>
         </div>
@@ -264,11 +313,11 @@
     <section class="packages" id="packages">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Servicios de Asesoría Blockchain: Elige tu <span class="highlight-text">Camino</span></h2>
-                <p class="section-subtitle">Mismo sistema. Distinto nivel de acompañamiento.</p>
+                <h2 class="section-title">¿Listo para <span class="highlight-text">implementarlo en 7 días?</span></h2>
+                <p class="section-subtitle">Elige tu ritmo. Mismo sistema. Resultados garantizados.</p>
             </div>
             
-           <!-- Oferta de Lanzamiento Banner -->
+            <!-- Oferta de Lanzamiento Banner -->
             <div class="black-friday-banner" data-aos="zoom-in">
                 <div class="bf-icon">⚡</div>
                 <div class="bf-content">
@@ -288,121 +337,71 @@
                 </div>
             </div>
             
-            <div class="packages-grid">
-                <!-- Paquete 1: Ebook -->
-                <div class="package-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="prism-bg" data-prism></div>
-                    <div class="package-image">
-                        <img src="https://www.genspark.ai/api/files/s/Xohjyg9Q?token=Z0FBQUFBQnBGaV9IRnhrZzdrY3h6MVc5X3puRkZPV2ZsUmlSclR1X0pjaktFSldMZjdkbWVRY09kVHE1R2I2aFE0R2lQV3Y1MG1EYjFjZjM2a0VWcWFLRGJUemNfZVZ0RTZBckhZdDJhd2R2bnEtaXpDYk1mekhZM1RIYWNoVW14c2Z3U2dZcGlTMVUxaTVScnRSY2ZVRnM0a0FJS1pVU3FiaUlyQUtrM2tHOUpBMmxWeDR6ZlAzdVkwZTVBTWVBNkNIdDFhLXpNWFJUR2JJejVGUDNEYWluYWtxanVWY3BPNDZ4dzk1c2lNR3lhZHhZMkVuY3U1cjJzVVV6M2FJSDlfWDdZRWtKZWI0bUd5aG5DMmtHRnJkTWJtZnBaa1V1alE9PQ" alt="La Nueva Economía Digital - Ebook CRYPTOCULTURA" class="package-ebook-img">
+            <!-- PAQUETES 1-1 COMPACTOS (Acordeón Hover) -->
+            <div class="packages-compact-grid">
+                <!-- Paquete 2x45 -->
+                <div class="package-compact-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="package-compact-header">
+                        <h3>Consultoría 2x45</h3>
+                        <p class="package-compact-price">$297 <span class="price-period-compact">USD</span></p>
+                        <p class="package-compact-tagline">Para velocidad y revisión personalizada</p>
                     </div>
                     
-                    <div class="package-header">
-                        <h3 class="package-name">La Nueva Economía Digital</h3>
-                        <p class="package-tagline">Autodidactas que quieren empezar sin errores.</p>
+                    <!-- Contenido expandible (acordeón) -->
+                    <div class="package-compact-details">
+                        <ul class="package-compact-features">
+                            <li><i class="fas fa-check"></i> Wallet creada y segura (grabación incluida)</li>
+                            <li><i class="fas fa-check"></i> 1ª compra de $100 realizada paso a paso</li>
+                            <li><i class="fas fa-check"></i> Plan de 30 días + checklist personalizada</li>
+                            <li><i class="fas fa-check"></i> 2 check-ins por email en 14 días</li>
+                            <li><i class="fas fa-check"></i> <strong>Garantía:</strong> Si no obtienes esos 3 entregables, reembolso 100%</li>
+                        </ul>
+                        
+                        <p class="package-time-info-compact">
+                            <i class="fas fa-clock"></i> Tiempo en vivo: 90 min · Total estimado: ~3 h / 7 días
+                        </p>
+                        
+                        <p class="package-note-compact">
+                            Cupos esta semana: <strong>3/5</strong>
+                        </p>
+                        
+                        <p class="package-bonus-compact">
+                            <i class="fas fa-gift"></i> Bonus: acceso al eBook
+                        </p>
+                        
+                        <a href="https://buy.stripe.com/9B69AU2nZ2DX0483kbdfG01" target="_blank" class="btn-cta-compact">
+                            Reservar Ahora - $297
+                        </a>
                     </div>
-                    
-                    <div class="package-price">
-                        <div class="price-original">$97</div>
-                        <span class="price-currency">$</span>
-                        <span class="price-amount">49</span>
-                        <span class="price-decimal">.99</span>
-                        <span class="price-period">USD</span>
-                    </div>
-                    
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i> En 7 días: wallet + primera compra de $100 + filtro anti‑scams.</li>
-                        <li><i class="fas fa-check"></i> Plantillas para evaluar proyectos en 10 min.</li>
-                        <li><i class="fas fa-check"></i> Actualizaciones por 1 año.</li>
-                        <li><i class="fas fa-check"></i> +299 páginas de contenido.</li>
-                    </ul>
-                    
-                    <a href="https://buy.stripe.com/00wcN66Ef4M518c1c3dfG00" target="_blank" class="btn btn-outline btn-block">
-                        <i class="fas fa-shopping-cart"></i>
-                        Comprar ahora
-                    </a>
                 </div>
                 
-                <!-- Paquete 2: Ebook + Consultoría (MÁS POPULAR) -->
-                <div class="package-card package-featured" data-aos="fade-up" data-aos-delay="200">
-                    <div class="prism-bg" data-prism></div>
-                    <div class="package-badge">
-                        <i class="fas fa-star"></i>
-                        Más Popular
+                <!-- Paquete 6x60 -->
+                <div class="package-compact-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="package-compact-header">
+                        <h3>Programa Intensivo 6×60 — claridad y ejecución en 90 días</h3>
+                        <p class="package-compact-price">$1,499 <span class="price-period-compact">USD</span></p>
+                        <p class="package-compact-tagline">Para acompañamiento completo con resultados medibles.</p>
                     </div>
                     
-                    <div class="package-image">
-                        <img src="https://www.genspark.ai/api/files/s/BhnHo0Gn?token=Z0FBQUFBQnBGajhhSHpnajZpN2NObG9ZZlpVSVJQRDRXa3VFRl9qYUREVE5QRDhJdnRwekN2Z01pd25nbFR6UXQxZ1lyNzB5N0tqNldhNUhraFBrVEdDS1dXNmFNTXJOWHZ3M2JvcGF6ZUVnVDhHQmROdnRORnlSWFpGMFMtYnh2a1JoZUZfOXQ0SklkQ29IbTRIS3NOLUxJRHV4YWQtZ25TOEVRaXpjMHFGS2xfMTRQVDQzYl9fQl9uVUZ0cEhEZWM2ZmRvX0hSTERRUU5qcHpqSkwwckllVTdsRFpKZjZCaUlVNXYtRmJEejYxam9IdkRvVDdsWTVQUkhiWElsU2VraFBjdTRMaDZfc3ZNRVU4Yk9nMkFaU2ZZd1UyRy1pT3c9PQ" alt="Ebook + Consultoría 1-1 - CRYPTOCULTURA" class="package-ebook-img">
+                    <!-- Contenido expandible (acordeón) -->
+                    <div class="package-compact-details">
+                        <ul class="package-compact-features">
+                            <li><i class="fas fa-check"></i> Roadmap 90 días por objetivos</li>
+                            <li><i class="fas fa-check"></i> Stack: wallets, exchanges, seguridad</li>
+                            <li><i class="fas fa-check"></i> Evaluación de 3 proyectos con tu marco</li>
+                            <li><i class="fas fa-check"></i> Portafolio + plan de riesgo</li>
+                            <li><i class="fas fa-check"></i> Soporte 2×/sem por 30 días</li>
+                        </ul>
+                        
+                        <p class="package-note-compact">
+                            Solo <strong>5 cupos/mes</strong>
+                        </p>
+                        
+                        <a href="https://buy.stripe.com/4gMaEY1jVdiBg369IzdfG02" target="_blank" class="btn-cta-compact">
+                            Aplicar
+                        </a>
                     </div>
-                    
-                    <div class="package-header">
-                        <h3 class="package-name">Consultoría 2 x 45</h3>
-                        <p class="package-tagline">Quiere velocidad y revisión personalizada.</p>
-                    </div>
-                    
-                    <div class="package-price">
-                        <div class="price-original">$397</div>
-                        <span class="price-currency">$</span>
-                        <span class="price-amount">297</span>
-                        <span class="price-decimal"></span>
-                        <span class="price-period">USD</span>
-                    </div>
-                    
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Sesión 1: wallet + seguridad + compra guiada.</li>
-                        <li><i class="fas fa-check"></i> Sesión 2: plan de 30 días + checklist personalizada.</li>
-                        <li><i class="fas fa-check"></i> Soporte asincrónico: 2 mensajes/semana por 30 días.</li>
-                        <li><i class="fas fa-check"></i> Ebook</li>
-                        <li><i class="fas fa-check"></i> Garantía: wallet funcionando + primera compra exitosa + plan 30 días, o te devolvemos tu dinero.</li>
-                    </ul>
-                    
-                    <a href="https://buy.stripe.com/9B69AU2nZ2DX0483kbdfG01" target="_blank" class="btn btn-primary btn-block">
-                        <i class="fas fa-calendar-check"></i>
-                        Reservar cupo
-                    </a>
-                    <p class="package-note">Cupos limitados semanales.</p>
                 </div>
-                
-                <!-- Paquete 3: Consultoría Especializada -->
-                <div class="package-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="prism-bg" data-prism></div>
-                    <div class="package-image">
-                        <img src="package-consultoria.png" alt="CRYPTOCULTURA Consultoría Especializada - Integración Crypto y Desarrollo Web B2B" class="package-ebook-img">
-                    </div>
-                    
-                    <div class="package-header">
-                        <div class="package-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <h3 class="package-name">Programa Intensivo - Alto acompañamiento 6×60</h3>
-                        <p class="package-tagline">Quiere acompañamiento completo y un plan 90 días.</p>
-                        <span class="package-cupos">(5 cupos/mes)</span>
-                    </div>
-                    
-                    <div class="package-price">
-                        <span class="price-currency">$</span>
-                        <span class="price-amount">1,499</span>
-                        <span class="price-period">USD</span>
-                    </div>
-                    
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Roadmap personalizado 90 días.</li>
-                        <li><i class="fas fa-check"></i> Montaje de stack (wallets, exchanges, seguridad).</li>
-                        <li><i class="fas fa-check"></i> Evaluación de 3 proyectos reales con tu marco.</li>
-                        <li><i class="fas fa-check"></i> Revisión de portafolio y plan de riesgo.</li>
-                        <li><i class="fas fa-check"></i> Soporte 2×/sem por 30 días.</li>
-                    </ul>
-                    
-                    <a href="https://buy.stripe.com/4gMaEY1jVdiBg369IzdfG02" target="_blank" class="btn btn-outline btn-block">
-                        <i class="fas fa-edit"></i>
-                        Aplicar
-                    </a>
-                    <p class="package-note">Solo 5 cupos/mes.</p>
-                </div>
-            </div>
-            
-            <div class="packages-note" data-aos="fade-up">
-                <i class="fas fa-shield-alt"></i>
-                <p>Garantía de satisfacción de 30 días. Si no estás satisfecho, te devolvemos tu dinero.</p>
             </div>
             
             <!-- Bloque de Confianza -->
@@ -861,8 +860,12 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Silk Background Canvas -->
+    <canvas id="silkBackground"></canvas>
+
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="script.js?v=20250108"></script>
     <script src="faq.js"></script>
     <script src="js/magic-button.js"></script>
 </body>
