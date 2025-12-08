@@ -929,6 +929,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // ===================================
+    // PAQUETES 1-1 COMPACTOS - ACORDEÓN HOVER/TAP
+    // ===================================
+    const compactCards = document.querySelectorAll('.package-compact-card');
+    const compactGrid = document.querySelector('.packages-compact-grid');
+    
+    if (compactCards.length > 0 && compactGrid) {
+        console.log('📦 PAQUETES COMPACTOS: Encontrados', compactCards.length, 'cards');
+        console.log('✅ Comportamiento: Al pasar cursor, ambos cards se expanden simultáneamente');
+        
+        // MOBILE: Toggle individual al hacer tap/click
+        compactCards.forEach((card, index) => {
+            card.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    // Prevenir que el click en el botón CTA active el acordeón
+                    if (e.target.classList.contains('btn-cta-compact') || e.target.closest('.btn-cta-compact')) {
+                        return;
+                    }
+                    // Toggle class expanded para expandir/contraer
+                    this.classList.toggle('expanded');
+                    console.log('📱 TAP: Card', index + 1, 'toggled');
+                }
+            });
+        });
+    } else {
+        console.warn('⚠️ No se encontraron cards con clase .package-compact-card');
+    }
+    
 });
 
 // ===================================
@@ -968,3 +996,153 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ===================================
+// SILK BACKGROUND EFFECT (Three.js)
+// ===================================
+(function() {
+    // Verificar que Three.js esté cargado
+    if (typeof THREE === 'undefined') {
+        console.warn('Three.js no está cargado. Silk effect no se aplicará.');
+        return;
+    }
+
+    const canvas = document.getElementById('silkBackground');
+    if (!canvas) {
+        console.warn('Canvas #silkBackground no encontrado.');
+        return;
+    }
+
+    // Parámetros del Silk
+    const params = {
+        speed: 5,
+        scale: 1,
+        color: '#1a3a5c', // Azul más claro y visible
+        noiseIntensity: 2.0,
+        rotation: 0
+    };
+
+    // Convertir color hex a RGB normalizado
+    const hexToRGB = (hex) => {
+        const r = parseInt(hex.slice(1, 3), 16) / 255;
+        const g = parseInt(hex.slice(3, 5), 16) / 255;
+        const b = parseInt(hex.slice(5, 7), 16) / 255;
+        return [r, g, b];
+    };
+
+    // Shaders GLSL
+    const vertexShader = `
+        varying vec2 vUv;
+        varying vec3 vPosition;
+
+        void main() {
+            vPosition = position;
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    `;
+
+    const fragmentShader = `
+        varying vec2 vUv;
+        varying vec3 vPosition;
+
+        uniform float uTime;
+        uniform vec3  uColor;
+        uniform float uSpeed;
+        uniform float uScale;
+        uniform float uRotation;
+        uniform float uNoiseIntensity;
+
+        const float e = 2.71828182845904523536;
+
+        float noise(vec2 texCoord) {
+            float G = e;
+            vec2  r = (G * sin(G * texCoord));
+            return fract(r.x * r.y * (1.0 + texCoord.x));
+        }
+
+        vec2 rotateUvs(vec2 uv, float angle) {
+            float c = cos(angle);
+            float s = sin(angle);
+            mat2  rot = mat2(c, -s, s, c);
+            return rot * uv;
+        }
+
+        void main() {
+            float rnd        = noise(gl_FragCoord.xy);
+            vec2  uv         = rotateUvs(vUv * uScale, uRotation);
+            vec2  tex        = uv * uScale;
+            float tOffset    = uSpeed * uTime;
+
+            tex.y += 0.03 * sin(8.0 * tex.x - tOffset);
+
+            float pattern = 0.6 +
+                            0.4 * sin(5.0 * (tex.x + tex.y +
+                                           cos(3.0 * tex.x + 5.0 * tex.y) +
+                                           0.02 * tOffset) +
+                                   sin(20.0 * (tex.x + tex.y - 0.1 * tOffset)));
+
+            vec4 col = vec4(uColor, 1.0) * vec4(pattern) - rnd / 15.0 * uNoiseIntensity;
+            col.a = 1.0;
+            gl_FragColor = col;
+        }
+    `;
+
+    // Setup Three.js
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    const renderer = new THREE.WebGLRenderer({ 
+        canvas: canvas,
+        alpha: true,
+        antialias: false
+    });
+    
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // Uniforms
+    const uniforms = {
+        uTime: { value: 0 },
+        uSpeed: { value: params.speed },
+        uScale: { value: params.scale },
+        uColor: { value: new THREE.Vector3(...hexToRGB(params.color)) },
+        uNoiseIntensity: { value: params.noiseIntensity },
+        uRotation: { value: params.rotation }
+    };
+
+    // Material con shaders
+    const material = new THREE.ShaderMaterial({
+        vertexShader: vertexShader,
+        fragmentShader: fragmentShader,
+        uniforms: uniforms
+    });
+
+    // Geometría
+    const geometry = new THREE.PlaneGeometry(2, 2);
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    // Animación
+    let lastTime = 0;
+    const animate = (time) => {
+        requestAnimationFrame(animate);
+        
+        const delta = (time - lastTime) * 0.001;
+        lastTime = time;
+        
+        uniforms.uTime.value += delta * 0.1;
+        renderer.render(scene, camera);
+    };
+
+    // Resize handler
+    const handleResize = () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+    
+    // Iniciar
+    animate(0);
+    
+    console.log('✨ Silk Background Effect initialized');
+})();
