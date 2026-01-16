@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // FORMULARIO DE LEAD MAGNET
     // ===================================
     const leadForm = document.getElementById('leadForm');
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxumnPIor15vZQUUnZjbP_ohrivkpWhL3Zyv8gW-pzv8N0X28YYxgSxiqnBxd1ZHDkf/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrtAwLecXv5Z3mkr5LQ4kdG6EHKK6TqxGSFCLPnvMPhKTUNpkzEPZE-oQlLTA-WfnbrQ/exec';
     
     if (leadForm) {
         leadForm.addEventListener('submit', function(e) {
